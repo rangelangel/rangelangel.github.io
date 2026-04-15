@@ -16,6 +16,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   justify-content: space-between; 
   gap: 10px; 
 }
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("resourses/GrendelGamesController.png");
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
 </style>
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -51,24 +65,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <div class="w3-main" style="margin-left:300px">
 
   <!-- Header -->
-  <header id="portfolio">
-    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
+  <header id="portfolio" class="hero-image">
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey w3-display-topleft" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <h1><b>Angelina Novruzova</b></h1>
+    <h3>Portfolio</h3>
+  </header>
+  
+  <div class="w3-container w3-white w3-padding-16">
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span> 
-      <button class="w3-button w3-black">ALL</button>
-      <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+      <button class="w3-button w3-black" onclick="filterSelection('all')">ALL</button>
+      <button class="w3-button w3-white" onclick="filterSelection('personal')"><i class="fa fa-user w3-margin-right"></i>Personal Projects</button>
+      <button class="w3-button w3-white" onclick="filterSelection('game-jam')"><i class="fa fa-gamepad w3-margin-right"></i>Game Jams</button>
+      <button class="w3-button w3-white w3-hide-small" onclick="filterSelection('companies')"><i class="fa fa-diamond w3-margin-right"></i>Companies</button>
     </div>
-    </div>
-  </header>
+  </div>
   
 <!-- Photo Grid-->
 <div style="display: flex; flex-wrap: wrap;">
-  <div class="w3-half w3-container w3-margin-bottom" id="hex">
+  <div class="w3-half w3-container w3-margin-bottom project-card game-jam personal" id="hex">
     <img src="resourses/Hex and Whiskers Victory.png" alt="Hex & Whiskers" style="width:100%" class="w3-hover-opacity">
     <div class="w3-container w3-white">
       <div class="project-header-links">
@@ -99,14 +114,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
-  <div class="w3-half w3-container w3-margin-bottom" id="curious">
+  <div class="w3-half w3-container w3-margin-bottom project-card companies" id="curious">
     <img src="resourses/Grendel Spiderweb.png" alt="Curious Cases" style="width:100%" class="w3-hover-opacity">
     <div class="w3-container w3-white">
       <div class="project-header-links">
         <p><b>Curious Cases</b></p>
         <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-about', 'resourses/Grendel Spiderweb.png')">About</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-desc', 'resourses/GrendelGamesController.png')">Description</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-con', 'resourses/GrendelGameFuse.png')">Contributions</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-desc', 'resourses/GrendelGameFuse.png')">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-con', 'resourses/GrendelGamesPrototyping.jpg')">Contributions</a>
       </div>
 
       <div id="curious-about" class="project-text">
@@ -127,7 +142,7 @@ Train core skills, like instrument handling, depth perception, and orientation i
     </div>
   </div>
 
-  <div class="w3-half w3-container" id="singraven">
+  <div class="w3-half w3-container project-card companies" id="singraven">
     <img src="resourses/Shadows of Singraven House.png" alt="Shadows of Singraven" style="width:100%" class="w3-hover-opacity">
     <div class="w3-container w3-white">
       <div class="project-header-links">
@@ -139,7 +154,7 @@ Train core skills, like instrument handling, depth perception, and orientation i
 
       <div id="singraven-about" class="project-text">
         <p><b>About</b></p>
-        <p>Shadows of Singraven is a horror experience where you play as the last Dutch witch hunter, called to investigate a haunted manor and its terrifying ghost nun.</p>
+        <p>Shadows of Singraven is a horror experience where you play as the last Dutch witch hunter, called to investigate a haunted manor and its terrifying ghost nun. Tis project was my Graduation INternship, where I was responsible for project management, leading a team of amazing artists and programmers. I was aslo responsible for narrative and quest design. This project started as a start-up of Leave.Your.Mark.compnay and now received the funding. </p>
       </div>
 
       <div id="singraven-desc" style="display: none;" class="project-text">
@@ -149,12 +164,12 @@ Train core skills, like instrument handling, depth perception, and orientation i
 
       <div id="singraven-con" style="display: none;" class="project-text">
         <p><b>Contributions</b></p>
-        <p>Add your contributions here, such as horror pacing, narrative design, environmental storytelling, level layout, or encounter design.</p>
+        <p>I had several important responsibilities: I was a team lead, which meant I was responsible for the team management, piching all design ideas to the client and then to the funders, managing resourses and also I was developing quest design and narrative branching design and implementing them to Unreal Engine. .</p>
       </div>
     </div>
   </div>
 
-  <div class="w3-half w3-container w3-margin-bottom" id="rose">
+  <div class="w3-half w3-container w3-margin-bottom project-card personal" id="rose">
     <img src="resourses/Throught the screen.png" alt="Code: Rose" style="width:100%" class="w3-hover-opacity">
     <div class="w3-container w3-white">
       <div class="project-header-links">
@@ -181,7 +196,7 @@ Train core skills, like instrument handling, depth perception, and orientation i
     </div>
   </div>
 
-  <div class="w3-half w3-container w3-margin-bottom" id="stolen">
+  <div class="w3-half w3-container w3-margin-bottom project-card personal" id="stolen">
     <img src="resourses/Screenshot 2026-04-13 111854.png" alt="Stolen Worlds" style="width:100%" class="w3-hover-opacity">
     <div class="w3-container w3-white">
       <div class="project-header-links">
@@ -210,7 +225,7 @@ The scope of this prototype is to build a small, crumbled castle where the worsh
     </div>
   </div>
 
-  <div class="w3-half w3-container" id="ant">
+  <div class="w3-half w3-container project-card game-jam" id="ant">
     <img src="resourses/AntTrobles.png" alt="Ant Troubles" style="width:100%" class="w3-hover-opacity">
     <div class="w3-container w3-white">
       <div class="project-header-links">
@@ -358,6 +373,58 @@ function showProjectSection(project, section, imgSrc) {
     }
   }
 }
+
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("project-card");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "w3-show");
+    w3AddClass(x[i], "w3-hide");
+    if (x[i].className.indexOf(c) > -1) {
+      w3RemoveClass(x[i], "w3-hide");
+      w3AddClass(x[i], "w3-show");
+    }
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+document.addEventListener("DOMContentLoaded", function() {
+  var btnContainer = document.querySelector(".w3-section.w3-bottombar");
+  if (btnContainer) {
+    var btns = btnContainer.getElementsByClassName("w3-button");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = btnContainer.getElementsByClassName("w3-black");
+        if (current.length > 0) {
+          current[0].className = current[0].className.replace(" w3-black", " w3-white");
+        }
+        this.className = this.className.replace(" w3-white", " w3-black");
+      });
+    }
+  }
+});
 </script>
 
 </body>
