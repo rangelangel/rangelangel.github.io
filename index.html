@@ -61,11 +61,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
+    <div class="w3-third w3-container w3-margin-bottom" id="hex">
       <img src="resourses\Hex and Whiskers Victory.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
-        <p><b>Hex & Whiskers</b></p>
-        <p>Cute coop game where you and your frined play as adorable witch cats to make potions on time! This project originally began as a game jam entry, where we won the award for Best Gameplay Mechanics. It has since grown into a personal project that I am continuing to develop with my team. We are now working on it together with the goal of releasing it on Steam, and the demo is planned for Steam Next Fest 2026.</p>
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+          <p><b>Hex & Whiskers</b></p>
+          <a onclick="showProjectSection('hex', 'hex-about')">About</a>
+          <a onclick="showProjectSection('hex', 'hex-desc')">Description</a>
+          <a onclick="showProjectSection('hex', 'hex-con')">Contributions</a>
+        </div>
+        <div id="hex-about" class="project-text">
+          <p><b>About</b></p>
+          <p>Cute coop game where you and your frined play as adorable witch cats to make potions on time! This project originally began as a game jam entry, where we won the award for Best Gameplay Mechanics. It has since grown into a personal project that I am continuing to develop with my team. We are now working on it together with the goal of releasing it on Steam, and the demo is planned for Steam Next Fest 2026.</p>
+        </div>
+        <div id="hex-desc" style="display: none;" class="project-text">
+          <p><b>Description</b></p>
+          <p>Cute coop game where you and your frined play as adorable witch cats to make potions on time! This project originally began as a game jam entry, where we won the award for Best Gameplay Mechanics. It has since grown into a personal project that I am continuing to develop with my team. We are now working on it together with the goal of releasing it on Steam, and the demo is planned for Steam Next Fest 2026.</p>
+        </div>
+        <div id="hex-con" style="display: none;" class="project-text">
+          <p><b>Contributions</b></p>
+          <p>Cute coop game where you and your frined play as adorable witch cats to make potions on time! This project originally began as a game jam entry, where we won the award for Best Gameplay Mechanics. It has since grown into a personal project that I am continuing to develop with my team. We are now working on it together with the goal of releasing it on Steam, and the demo is planned for Steam Next Fest 2026.</p>
+        </div>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
@@ -138,6 +154,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       I have experience in level, puzzle, and narrative design, with I’ve worked on a range of group projects to create fun, distinctive games, while also developing my skills through solo work. I have experience in leading teams, collaborating closely with designers and artists to create engaging and polished gameplay. My work spans both entertainment games and serious games.
       I’m available for new opportunities and open to relocation.</p>
     <hr>
+
+    <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+      <h4><b>My Side Quests</b></h4>
+      <p>Writing stories is a part of my life and my soul. In my free time, I’m a Dungeon Master, and my friends and I have been playing our campaign together for over four years! I also write one-shots for newcomers who want to try D&D but aren’t sure where to start. For my games, I mostly draw maps and worlds or make them physically.</p>
+      <hr>
   
     <h4>Technical Skills</h4>
     <!-- Progress bars / Skills -->
@@ -201,12 +222,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   
     <div class="w3-third">
-      <h3>BLOG POSTS</h3>
+      <h3>My Side</h3>
       <ul class="w3-ul w3-hoverable">
         <li class="w3-padding-16">
-          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Lorem</span><br>
-          <span>Sed mattis nunc</span>
+          <img src="resourses\DnD.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">DnD Master</span><br>
+          <span></span>
         </li>
         <li class="w3-padding-16">
           <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
@@ -217,14 +238,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
 
     <div class="w3-third">
-      <h3>POPULAR TAGS</h3>
-      <p>
-        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-      </p>
+      <h3>Lets stay in touch!</h3>
+      <p>Send me a message through gmail or check out my LinkedIn page.
+        I look forward to work with you!</p>
+      <i class="fa-brands fa-linkedin w3-hover-opacity"></i>
+    <i class="fa-solid fa-envelope w3-hover-opacity"></i>
+    <i class="fa-brands fa-instagram w3-hover-opacity"></i>
+    <i class="fa-brands fa-tiktok w3-hover-opacity"></i>
     </div>
 
   </div>
@@ -245,6 +265,14 @@ function w3_open() {
 function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
+}
+function showProjectSection(project, section) {
+  var i;
+  var x = document.getElementById(project).getElementsByClassName("project-text");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(section).style.display = "block";
 }
 </script>
 
