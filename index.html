@@ -9,6 +9,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+.project-header-links {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 10px; 
+}
 </style>
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -59,73 +66,173 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </header>
   
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom" id="hex">
-      <img src="resourses\Hex and Whiskers Victory.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
-          <p><b>Hex & Whiskers</b></p>
-          <a onclick="showProjectSection('hex', 'hex-about')">About</a>
-          <a onclick="showProjectSection('hex', 'hex-desc')">Description</a>
-          <a onclick="showProjectSection('hex', 'hex-con')">Contributions</a>
-        </div>
-        <div id="hex-about" class="project-text">
-          <p><b>About</b></p>
-          <p>Cute coop game where you and your frined play as adorable witch cats to make potions on time! This project originally began as a game jam entry, where we won the award for Best Gameplay Mechanics. It has since grown into a personal project that I am continuing to develop with my team. We are now working on it together with the goal of releasing it on Steam, and the demo is planned for Steam Next Fest 2026.</p>
-        </div>
-        <div id="hex-desc" style="display: none;" class="project-text">
-          <p><b>Description</b></p>
-          <p>Cute coop game where you and your frined play as adorable witch cats to make potions on time! This project originally began as a game jam entry, where we won the award for Best Gameplay Mechanics. It has since grown into a personal project that I am continuing to develop with my team. We are now working on it together with the goal of releasing it on Steam, and the demo is planned for Steam Next Fest 2026.</p>
-        </div>
-        <div id="hex-con" style="display: none;" class="project-text">
-          <p><b>Contributions</b></p>
-          <p>Cute coop game where you and your frined play as adorable witch cats to make potions on time! This project originally began as a game jam entry, where we won the award for Best Gameplay Mechanics. It has since grown into a personal project that I am continuing to develop with my team. We are now working on it together with the goal of releasing it on Steam, and the demo is planned for Steam Next Fest 2026.</p>
-        </div>
+<!-- First Photo Grid-->
+<div class="w3-row-padding">
+  <div class="w3-third w3-container w3-margin-bottom" id="hex">
+    <img src="resourses/Hex and Whiskers Victory.png" alt="Hex & Whiskers" style="width:100%" class="w3-hover-opacity">
+    <div class="w3-container w3-white">
+      <div class="project-header-links">
+        <p><b>Hex & Whiskers</b></p>
+        <a href="javascript:void(0)" onclick="showProjectSection('hex', 'hex-about')">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('hex', 'hex-desc')">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('hex', 'hex-con')">Contributions</a>
       </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="resourses\Grendel Spiderweb.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Curious Cases</b></p>
-        <p>
-          Train core skills, like instrument handling, depth perception, and orientation in a series of increasingly challenging but fun games, the “Curious Cases”.</p>
+
+      <div id="hex-about" class="project-text">
+        <p><b>About</b></p>
+        <p>Cute co-op game where you and your friend play as adorable witch cats to make potions on time! This project originally began as a game jam entry, where we won the award for Best Gameplay Mechanics. It has since grown into a personal project that I am continuing to develop with my team.</p>
       </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="resourses\Shadows of Singraven House.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Shadows of Singraven</b></p>
-        <p>You are the last Dutch witch hunter who could not understand how the nun could transform into a devil. The manor owner’s family is scared, and your mission is to get rid of the ghost nun! Do you hear it? The nun is screaming... Can you feel it? It is your heartbeat...</p>
+
+      <div id="hex-desc" style="display: none;" class="project-text">
+        <p><b>Description</b></p>
+        <p>We are now working on it together with the goal of releasing it on Steam, and the demo is planned for Steam Next Fest 2026.</p>
       </div>
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="resourses\Throught the screen.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Code: Rose</b></p>
-        <p>A chilling murder rocks a quiet church, surrounded by mystery. The only clue? A strange person in 19th-century attire, slipping through the shadows. As you follow the story, stalking the quiet killer through old screens, one question haunts you: Who is behind this? Could it even be... you</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="resourses\Screenshot 2026-04-13 111854.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Stolen Worlds</b></p>
-        <p>A personal reserach project of the souls like quest and map methodology. A project was aimed to to research how I can build interesting and fun quest and narrative around vertical structure and looping paths of the map design.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="resourses\AntTrobles.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Ant Troubles</b></p>
-        <p>This simple, minimalistic game was created for a Game Jam and puts you in charge of feeding an ant. The goal is simple: get the food source and go back to your ant hill.  But watch out — bumping into other ants will end your run!.</p>
+
+      <div id="hex-con" style="display: none;" class="project-text">
+        <p><b>Contributions</b></p>
+        <p>Add your personal contributions here, for example level design, puzzle design, narrative design, prototyping, documentation, playtesting, or team leadership.</p>
       </div>
     </div>
   </div>
 
+  <div class="w3-third w3-container w3-margin-bottom" id="curious">
+    <img src="resourses/Grendel Spiderweb.png" alt="Curious Cases" style="width:100%" class="w3-hover-opacity">
+    <div class="w3-container w3-white">
+      <div class="project-header-links">
+        <p><b>Curious Cases</b></p>
+        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-about')">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-desc')">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-con')">Contributions</a>
+      </div>
+
+      <div id="curious-about" class="project-text">
+        <p><b>About</b></p>
+        <p>Curious Cases is a series of training games focused on developing core skills such as instrument handling, depth perception, and orientation through playful challenges.</p>
+      </div>
+
+      <div id="curious-desc" style="display: none;" class="project-text">
+        <p><b>Description</b></p>
+        <p>Players progress through a set of increasingly challenging but fun mini-games designed to help build practical abilities in an engaging way.</p>
+      </div>
+
+      <div id="curious-con" style="display: none;" class="project-text">
+        <p><b>Contributions</b></p>
+        <p>Add your role here, such as level design, serious game design, UX flow, balancing, prototyping, or collaboration with the team.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-container" id="singraven">
+    <img src="resourses/Shadows of Singraven House.png" alt="Shadows of Singraven" style="width:100%" class="w3-hover-opacity">
+    <div class="w3-container w3-white">
+      <div class="project-header-links">
+        <p><b>Shadows of Singraven</b></p>
+        <a href="javascript:void(0)" onclick="showProjectSection('singraven', 'singraven-about')">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('singraven', 'singraven-desc')">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('singraven', 'singraven-con')">Contributions</a>
+      </div>
+
+      <div id="singraven-about" class="project-text">
+        <p><b>About</b></p>
+        <p>Shadows of Singraven is a horror experience where you play as the last Dutch witch hunter, called to investigate a haunted manor and its terrifying ghost nun.</p>
+      </div>
+
+      <div id="singraven-desc" style="display: none;" class="project-text">
+        <p><b>Description</b></p>
+        <p>The manor owner’s family is terrified, and your mission is to get rid of the ghost nun. The atmosphere leans into fear, mystery, and tension.</p>
+      </div>
+
+      <div id="singraven-con" style="display: none;" class="project-text">
+        <p><b>Contributions</b></p>
+        <p>Add your contributions here, such as horror pacing, narrative design, environmental storytelling, level layout, or encounter design.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Second Photo Grid-->
+<div class="w3-row-padding">
+  <div class="w3-third w3-container w3-margin-bottom" id="rose">
+    <img src="resourses/Throught the screen.png" alt="Code: Rose" style="width:100%" class="w3-hover-opacity">
+    <div class="w3-container w3-white">
+      <div class="project-header-links">
+        <p><b>Code: Rose</b></p>
+        <a href="javascript:void(0)" onclick="showProjectSection('rose', 'rose-about')">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('rose', 'rose-desc')">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('rose', 'rose-con')">Contributions</a>
+      </div>
+
+      <div id="rose-about" class="project-text">
+        <p><b>About</b></p>
+        <p>Code: Rose is a chilling mystery set around a murder in a quiet church, with strange clues and a shadowy figure dressed in 19th-century clothing.</p>
+      </div>
+
+      <div id="rose-desc" style="display: none;" class="project-text">
+        <p><b>Description</b></p>
+        <p>As you follow the story through old screens, you stalk the quiet killer and uncover unsettling questions about identity, perspective, and guilt.</p>
+      </div>
+
+      <div id="rose-con" style="display: none;" class="project-text">
+        <p><b>Contributions</b></p>
+        <p>Add your contributions here, such as narrative design, investigation flow, interaction design, writing, or scene structure.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-container w3-margin-bottom" id="stolen">
+    <img src="resourses/Screenshot 2026-04-13 111854.png" alt="Stolen Worlds" style="width:100%" class="w3-hover-opacity">
+    <div class="w3-container w3-white">
+      <div class="project-header-links">
+        <p><b>Stolen Worlds</b></p>
+        <a href="javascript:void(0)" onclick="showProjectSection('stolen', 'stolen-about')">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('stolen', 'stolen-desc')">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('stolen', 'stolen-con')">Contributions</a>
+      </div>
+
+      <div id="stolen-about" class="project-text">
+        <p><b>About</b></p>
+        <p>Stolen Worlds is a personal research project exploring souls-like quest and map methodology.</p>
+      </div>
+
+      <div id="stolen-desc" style="display: none;" class="project-text">
+        <p><b>Description</b></p>
+        <p>The project focuses on researching how to build interesting and fun quests and narrative around vertical structures and looping map paths.</p>
+      </div>
+
+      <div id="stolen-con" style="display: none;" class="project-text">
+        <p><b>Contributions</b></p>
+        <p>Add your contributions here, such as map research, quest design, narrative structure, spatial analysis, or documentation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-container" id="ant">
+    <img src="resourses/AntTrobles.png" alt="Ant Troubles" style="width:100%" class="w3-hover-opacity">
+    <div class="w3-container w3-white">
+      <div class="project-header-links">
+        <p><b>Ant Troubles</b></p>
+        <a href="javascript:void(0)" onclick="showProjectSection('ant', 'ant-about')">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('ant', 'ant-desc')">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('ant', 'ant-con')">Contributions</a>
+      </div>
+
+      <div id="ant-about" class="project-text">
+        <p><b>About</b></p>
+        <p>Ant Troubles is a simple, minimalistic game created for a game jam, where the player controls an ant trying to bring food back home.</p>
+      </div>
+
+      <div id="ant-desc" style="display: none;" class="project-text">
+        <p><b>Description</b></p>
+        <p>The goal is simple: get the food source and return to the ant hill. But bumping into other ants will end your run.</p>
+      </div>
+
+      <div id="ant-con" style="display: none;" class="project-text">
+        <p><b>Contributions</b></p>
+        <p>Add your contributions here, such as mechanics design, game jam prototyping, balancing, UI, or playtesting.</p>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Pagination -->
   <div class="w3-center w3-padding-32">
     <div class="w3-bar">
