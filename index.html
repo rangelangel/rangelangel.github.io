@@ -43,6 +43,26 @@ a {
   text-decoration: none;
   color: black;
 }
+/* Consistent Card Sizing */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px !important;
+}
+.project-card img {
+  height: 400px;
+  object-fit: cover;
+}
+.project-card .w3-container.w3-white {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-text-container {
+  height: 250px; /* Fixed height to prevent jumping */
+  overflow-y: auto;
+  padding-bottom: 16px;
+}
 </style>
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -104,23 +124,25 @@ a {
         <a href="javascript:void(0)" onclick="showProjectSection('hex', 'hex-con', 'resourses/UI.png', this)">Contributions</a>
       </div>
 
-      <div id="hex-about" class="project-text">
-        <p><b>About</b></p>
-        <p>Cute co-op game where you and your friend play as adorable witch cats to make potions on time! This project originally began as a game jam, where we won the award for Best Gameplay Mechanics. We are now working on it together with the goal of releasing it on Steam, and the demo is planned for Steam Next Fest 2026.</p>
-      </div>
+      <div class="project-text-container">
+        <div id="hex-about" class="project-text">
+          <p><b>About</b></p>
+          <p>Cute co-op game where you and your friend play as adorable witch cats to make potions on time! This project originally began as a game jam, where we won the award for Best Gameplay Mechanics. We are now working on it together with the goal of releasing it on Steam, and the demo is planned for Steam Next Fest 2026.</p>
+        </div>
 
-      <div id="hex-desc" style="display: none;" class="project-text">
-        <p><b>Description</b></p>
-        <p>Two little cats named Hex and Whiskers are working together at their potion shop. They look forward to making more brew for their lovely customers. Ooohps... There is so much stuff going on! You have to mix the pot while adding eyes, boots, and even slugs?!
+        <div id="hex-desc" style="display: none;" class="project-text">
+          <p><b>Description</b></p>
+          <p>Two little cats named Hex and Whiskers are working together at their potion shop. They look forward to making more brew for their lovely customers. Ooohps... There is so much stuff going on! You have to mix the pot while adding eyes, boots, and even slugs?!
 
- Prepare your controllers, grab a friend, and help our little potion makers brew as many concoctions as possible in a limited amount of time! Hex & Whiskers are waiting for you!
+   Prepare your controllers, grab a friend, and help our little potion makers brew as many concoctions as possible in a limited amount of time! Hex & Whiskers are waiting for you!
 
-</p>
-      </div>
+  </p>
+        </div>
 
-      <div id="hex-con" style="display: none;" class="project-text">
-        <p><b>Contributions</b></p>
-        <p>My responsibilities include level design, game balancing, team management, producing, UI design, and team leadership. As the game is still in production, I am also expanding my skills in UI design and marketing while continuing to lead the team and work on both UI and level design.</p>
+        <div id="hex-con" style="display: none;" class="project-text">
+          <p><b>Contributions</b></p>
+          <p>My responsibilities include level design, game balancing, team management, producing, UI design, and team leadership. As the game is still in production, I am also expanding my skills in UI design and marketing while continuing to lead the team and work on both UI and level design.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -135,20 +157,22 @@ a {
         <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-con', 'resourses/GrendelGamesPrototyping.jpg', this)">Contributions</a>
       </div>
 
-      <div id="curious-about" class="project-text">
-        <p><b>About</b></p>
-        <p>At Grendel Games, I contributed as a level designer for a serious game aimed at training laparoscopic skills for surgeons. My main responsibility was developing levels that were both engaging and medically accurate, ensuring they aligned with the real-world movements and actions surgeons perform. I actively participated in testing and refinement, working closely with surgeons who partnered with Grendel Games.</p>
-      </div>
+      <div class="project-text-container">
+        <div id="curious-about" class="project-text">
+          <p><b>About</b></p>
+          <p>At Grendel Games, I contributed as a level designer for a serious game aimed at training laparoscopic skills for surgeons. My main responsibility was developing levels that were both engaging and medically accurate, ensuring they aligned with the real-world movements and actions surgeons perform. I actively participated in testing and refinement, working closely with surgeons who partnered with Grendel Games.</p>
+        </div>
 
-      <div id="curious-desc" style="display: none;" class="project-text">
-        <p><b>Description</b></p>
-        <p>
-Train core skills, like instrument handling, depth perception, and orientation in a series of increasingly challenging games, the “Curious Cases”. Players progress through a set of challenging but fun mini-games designed to help build  laparoscopic abilities as grasping, suturing or cutting in an engaging way.</p>
-      </div>
+        <div id="curious-desc" style="display: none;" class="project-text">
+          <p><b>Description</b></p>
+          <p>
+  Train core skills, like instrument handling, depth perception, and orientation in a series of increasingly challenging games, the “Curious Cases”. Players progress through a set of challenging but fun mini-games designed to help build  laparoscopic abilities as grasping, suturing or cutting in an engaging way.</p>
+        </div>
 
-      <div id="curious-con" style="display: none;" class="project-text">
-        <p><b>Contributions</b></p>
-        <p>I was designing the game’s mechanics, balancing the game’s difficulty, writing documentation, implementing mechanics in Unity, and writing and implementing narrative elements in the mini-games.</p>
+        <div id="curious-con" style="display: none;" class="project-text">
+          <p><b>Contributions</b></p>
+          <p>I was designing the game’s mechanics, balancing the game’s difficulty, writing documentation, implementing mechanics in Unity, and writing and implementing narrative elements in the mini-games.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -163,19 +187,21 @@ Train core skills, like instrument handling, depth perception, and orientation i
         <a href="javascript:void(0)" onclick="showProjectSection('singraven', 'singraven-con', 'resourses/ShadowsofSingravenStory.png', this)">Contributions</a>
       </div>
 
-      <div id="singraven-about" class="project-text">
-        <p><b>About</b></p>
-        <p>Shadows of Singraven is a horror experience in which you play as the last Dutch witch hunter, called to investigate a haunted manor and its terrifying ghost nun. This project was my graduation internship, during which I was responsible for project management and for leading a team of talented artists and programmers. I was also responsible for the narrative and quest design. The project began as a start-up by Leave.Your.Mark Company and has now received funding. Its mission and vision are to revive Twents folklore, drawing from Dutch history and mythology to raise awareness. The game is a semi-open-world horror experience featuring puzzles and maze-like structures. </p>
-      </div>
+      <div class="project-text-container">
+        <div id="singraven-about" class="project-text">
+          <p><b>About</b></p>
+          <p>Shadows of Singraven is a horror experience in which you play as the last Dutch witch hunter, called to investigate a haunted manor and its terrifying ghost nun. This project was my graduation internship, during which I was responsible for project management and for leading a team of talented artists and programmers. I was also responsible for the narrative and quest design. The project began as a start-up by Leave.Your.Mark Company and has now received funding. Its mission and vision are to revive Twents folklore, drawing from Dutch history and mythology to raise awareness. The game is a semi-open-world horror experience featuring puzzles and maze-like structures. </p>
+        </div>
 
-      <div id="singraven-desc" style="display: none;" class="project-text">
-        <p><b>Description</b></p>
-        <p>The manor owner’s family is terrified, and your mission is to get rid of the ghost nun. The atmosphere leans into fear, mystery, and tension.</p>
-      </div>
+        <div id="singraven-desc" style="display: none;" class="project-text">
+          <p><b>Description</b></p>
+          <p>The manor owner’s family is terrified, and your mission is to get rid of the ghost nun. The atmosphere leans into fear, mystery, and tension.</p>
+        </div>
 
-      <div id="singraven-con" style="display: none;" class="project-text">
-        <p><b>Contributions</b></p>
-        <p>I had several important responsibilities: I was a team lead, which meant I was responsible for team management, pitching all design ideas to the client and then to the funders, managing resources, and developing quest design and narrative branching design, as well as implementing them in Unreal Engine.</p>
+        <div id="singraven-con" style="display: none;" class="project-text">
+          <p><b>Contributions</b></p>
+          <p>I had several important responsibilities: I was a team lead, which meant I was responsible for team management, pitching all design ideas to the client and then to the funders, managing resources, and developing quest design and narrative branching design, as well as implementing them in Unreal Engine.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -190,19 +216,21 @@ Train core skills, like instrument handling, depth perception, and orientation i
         <a href="javascript:void(0)" onclick="showProjectSection('rose', 'rose-con', 'resourses/blockout.png', this)">Contributions</a>
       </div>
 
-      <div id="rose-about" class="project-text">
-        <p><b>About</b></p>
-        <p>Code: Rose is a chilling mystery set around a murder in a quiet church, with strange clues and a shadowy figure dressed in 19th-century clothing.</p>
-      </div>
+      <div class="project-text-container">
+        <div id="rose-about" class="project-text">
+          <p><b>About</b></p>
+          <p>Code: Rose is a chilling mystery set around a murder in a quiet church, with strange clues and a shadowy figure dressed in 19th-century clothing.</p>
+        </div>
 
-      <div id="rose-desc" style="display: none;" class="project-text">
-        <p><b>Description</b></p>
-        <p>This point-and-click detective game built in Unity. The goal of the game is to solve all the puzzles by switching between security screens and choose different story paths to get to the end. I was responsible for leading a ream of 6 people, designing puzzles, creating a story and making a block-out.</p>
-      </div>
+        <div id="rose-desc" style="display: none;" class="project-text">
+          <p><b>Description</b></p>
+          <p>This point-and-click detective game built in Unity. The goal of the game is to solve all the puzzles by switching between security screens and choose different story paths to get to the end. I was responsible for leading a ream of 6 people, designing puzzles, creating a story and making a block-out.</p>
+        </div>
 
-      <div id="rose-con" style="display: none;" class="project-text">
-        <p><b>Contributions</b></p>
-        <p> Working on the branching narratives, designing puzzles and mechanics, A/B testing,creating a block-out and leading the team of 6 people.</p>
+        <div id="rose-con" style="display: none;" class="project-text">
+          <p><b>Contributions</b></p>
+          <p> Working on the branching narratives, designing puzzles and mechanics, A/B testing,creating a block-out and leading the team of 6 people.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -217,21 +245,23 @@ Train core skills, like instrument handling, depth perception, and orientation i
         <a href="javascript:void(0)" onclick="showProjectSection('stolen', 'stolen-con', 'resourses/PathStolenSouls.png', this)">Contributions</a>
       </div>
 
-      <div id="stolen-about" class="project-text">
-        <p><b>About</b></p>
-        <p>Stolen Worlds is a personal research project exploring souls-like quest and map methodology. The project focuses on researching how to build interesting and fun quests and narrative around vertical structures and looping map paths.</p>
-      </div>
+      <div class="project-text-container">
+        <div id="stolen-about" class="project-text">
+          <p><b>About</b></p>
+          <p>Stolen Worlds is a personal research project exploring souls-like quest and map methodology. The project focuses on researching how to build interesting and fun quests and narrative around vertical structures and looping map paths.</p>
+        </div>
 
-      <div id="stolen-desc" style="display: none;" class="project-text">
-        <p><b>Description</b></p>
-        <p>This third-person action RPG prototype places the player in the role of Fenmaris Sulthanthra, a warrior exploring a hostile and decaying world. There is an undead world and a living world, and his job is to get to the undead world to fight the 7 deadly sins, the kings, the gods of the underworld. He is buying dead souls to marry Elianna, the woman of his dreams, but because he does not have the high title, he has to buy the souls. The player must survive dangerous encounters, explore interconnected environments, and overcome powerful enemies through precise combat, careful resource management, and mastery of timing.
-The scope of this prototype is to build a small, crumbled castle where the worshippers of Godorof, the god of Mud and Suffering, are located, to investigate it, and to fight a mini boss: Radjahar, a creature with 7 wings and 7 minds, the guardian of Godorof.
-</p>
-      </div>
+        <div id="stolen-desc" style="display: none;" class="project-text">
+          <p><b>Description</b></p>
+          <p>This third-person action RPG prototype places the player in the role of Fenmaris Sulthanthra, a warrior exploring a hostile and decaying world. There is an undead world and a living world, and his job is to get to the undead world to fight the 7 deadly sins, the kings, the gods of the underworld. He is buying dead souls to marry Elianna, the woman of his dreams, but because he does not have the high title, he has to buy the souls. The player must survive dangerous encounters, explore interconnected environments, and overcome powerful enemies through precise combat, careful resource management, and mastery of timing.
+  The scope of this prototype is to build a small, crumbled castle where the worshippers of Godorof, the god of Mud and Suffering, are located, to investigate it, and to fight a mini boss: Radjahar, a creature with 7 wings and 7 minds, the guardian of Godorof.
+  </p>
+        </div>
 
-      <div id="stolen-con" style="display: none;" class="project-text">
-        <p><b>Contributions & Future Plans</b></p>
-        <p>I have finished prototyping and GGD for the castle map and the core game loop, though the boss fight still needs to be completed. After finishing the boss encounter, I plan to implement free assets from Fab and publish my research on Medium. For now, I have used the Soulslike Template for systems such as the campfire mechanic, target lock-on, and inventory, but I plan to replace them with my own implementations. At the same time, I want to continue learning and improving the combat mechanics.</p>
+        <div id="stolen-con" style="display: none;" class="project-text">
+          <p><b>Contributions & Future Plans</b></p>
+          <p>I have finished prototyping and GGD for the castle map and the core game loop, though the boss fight still needs to be completed. After finishing the boss encounter, I plan to implement free assets from Fab and publish my research on Medium. For now, I have used the Soulslike Template for systems such as the campfire mechanic, target lock-on, and inventory, but I plan to replace them with my own implementations. At the same time, I want to continue learning and improving the combat mechanics.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -246,19 +276,21 @@ The scope of this prototype is to build a small, crumbled castle where the worsh
         <a href="javascript:void(0)" onclick="showProjectSection('ant', 'ant-con', 'resourses/photo_5397757225528398889_y.jpg', this)">Contributions</a>
       </div>
 
-      <div id="ant-about" class="project-text">
-        <p><b>About</b></p>
-        <p>Ant Troubles is a minimalist hyper-casual game made for a two-day game jam. The player takes control of an ant whose goal is to bring food back home while overcoming obstacles along the way. Created around the theme “Out of Options,” the game won the jam.</p>
-      </div>
+      <div class="project-text-container">
+        <div id="ant-about" class="project-text">
+          <p><b>About</b></p>
+          <p>Ant Troubles is a minimalist hyper-casual game made for a two-day game jam. The player takes control of an ant whose goal is to bring food back home while overcoming obstacles along the way. Created around the theme “Out of Options,” the game won the jam.</p>
+        </div>
 
-      <div id="ant-desc" style="display: none;" class="project-text">
-        <p><b>Description</b></p>
-        <p>This simple game was created for a Game Jam and puts you in charge of feeding an ant. The goal is simple: get the food source and go back to your ant hill.  But watch out — bumping into other ants will end your run!</p>
-      </div>
+        <div id="ant-desc" style="display: none;" class="project-text">
+          <p><b>Description</b></p>
+          <p>This simple game was created for a Game Jam and puts you in charge of feeding an ant. The goal is simple: get the food source and go back to your ant hill.  But watch out — bumping into other ants will end your run!</p>
+        </div>
 
-      <div id="ant-con" style="display: none;" class="project-text">
-        <p><b>Contributions</b></p>
-        <p>Conceptualizing, developing game mechanics, making 2D assets, working on UI.</p>
+        <div id="ant-con" style="display: none;" class="project-text">
+          <p><b>Contributions</b></p>
+          <p>Conceptualizing, developing game mechanics, making 2D assets, working on UI.</p>
+        </div>
       </div>
     </div>
   </div>
