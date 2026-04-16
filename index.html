@@ -16,6 +16,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   justify-content: space-between; 
   gap: 10px; 
 }
+.project-header-links a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+}
+.project-header-links a.active {
+  color: #009688;
+  font-weight: bold;
+}
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("resourses/GrendelGamesController.png");
   height: 250px;
@@ -29,6 +38,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   align-items: center;
   color: white;
   text-align: center;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 </style>
 </head>
@@ -44,7 +57,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h4><b>Angelina Novruzova Portfolio</b></h4>
   </div>
   <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
   </div>
@@ -86,9 +99,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <div class="w3-container w3-white">
       <div class="project-header-links">
         <p><b>Hex & Whiskers</b></p>
-        <a href="javascript:void(0)" onclick="showProjectSection('hex', 'hex-about', 'resourses/Hex and Whiskers Victory.png')">About</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('hex', 'hex-desc', 'resourses/Paused.png')">Description</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('hex', 'hex-con', 'resourses/UI.png')">Contributions</a>
+        <a href="javascript:void(0)" class="active" onclick="showProjectSection('hex', 'hex-about', 'resourses/Hex and Whiskers Victory.png', this)">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('hex', 'hex-desc', 'resourses/Paused.png', this)">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('hex', 'hex-con', 'resourses/UI.png', this)">Contributions</a>
       </div>
 
       <div id="hex-about" class="project-text">
@@ -107,7 +120,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
       <div id="hex-con" style="display: none;" class="project-text">
         <p><b>Contributions</b></p>
-        <p>Level design, game balancing, team management, producing, UI design, team leadership.</p>
+        <p>My responsibilities include level design, game balancing, team management, producing, UI design, and team leadership. As the game is still in production, I am also expanding my skills in UI design and marketing while continuing to lead the team and work on both UI and level design.</p>
       </div>
     </div>
   </div>
@@ -117,9 +130,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <div class="w3-container w3-white">
       <div class="project-header-links">
         <p><b>Curious Cases</b></p>
-        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-about', 'resourses/Grendel Spiderweb.png')">About</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-desc', 'resourses/GrendelGameFuse.png')">Description</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-con', 'resourses/GrendelGamesPrototyping.jpg')">Contributions</a>
+        <a href="javascript:void(0)" class="active" onclick="showProjectSection('curious', 'curious-about', 'resourses/Grendel Spiderweb.png', this)">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-desc', 'resourses/GrendelGameFuse.png', this)">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('curious', 'curious-con', 'resourses/GrendelGamesPrototyping.jpg', this)">Contributions</a>
       </div>
 
       <div id="curious-about" class="project-text">
@@ -135,7 +148,7 @@ Train core skills, like instrument handling, depth perception, and orientation i
 
       <div id="curious-con" style="display: none;" class="project-text">
         <p><b>Contributions</b></p>
-        <p>Desinging the game's mechanics, Balancing the game's difficulty, writing documents, Implementing mechanics in Unity, Writing and implementing narrative elements in the mini games.</p>
+        <p>I was designing the game’s mechanics, balancing the game’s difficulty, writing documentation, implementing mechanics in Unity, and writing and implementing narrative elements in the mini-games.</p>
       </div>
     </div>
   </div>
@@ -145,14 +158,14 @@ Train core skills, like instrument handling, depth perception, and orientation i
     <div class="w3-container w3-white">
       <div class="project-header-links">
         <p><b>Shadows of Singraven</b></p>
-        <a href="javascript:void(0)" onclick="showProjectSection('singraven', 'singraven-about', 'resourses/Shadows of Singraven House.png')">About</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('singraven', 'singraven-desc', 'resourses/ShadowsofSingravenBlockOut.png')">Description</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('singraven', 'singraven-con', 'resourses/ShadowsofSingravenStory.png')">Contributions</a>
+        <a href="javascript:void(0)" class="active" onclick="showProjectSection('singraven', 'singraven-about', 'resourses/Shadows of Singraven House.png', this)">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('singraven', 'singraven-desc', 'resourses/ShadowsofSingravenBlockOut.png', this)">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('singraven', 'singraven-con', 'resourses/ShadowsofSingravenStory.png', this)">Contributions</a>
       </div>
 
       <div id="singraven-about" class="project-text">
         <p><b>About</b></p>
-        <p>Shadows of Singraven is a horror experience where you play as the last Dutch witch hunter, called to investigate a haunted manor and its terrifying ghost nun. Tis project was my Graduation INternship, where I was responsible for project management, leading a team of amazing artists and programmers. I was aslo responsible for narrative and quest design. This project started as a start-up of Leave.Your.Mark.compnay and now received the funding. </p>
+        <p>Shadows of Singraven is a horror experience in which you play as the last Dutch witch hunter, called to investigate a haunted manor and its terrifying ghost nun. This project was my graduation internship, during which I was responsible for project management and for leading a team of talented artists and programmers. I was also responsible for the narrative and quest design. The project began as a start-up by Leave.Your.Mark Company and has now received funding. Its mission and vision are to revive Twents folklore, drawing from Dutch history and mythology to raise awareness. The game is a semi-open-world horror experience featuring puzzles and maze-like structures. </p>
       </div>
 
       <div id="singraven-desc" style="display: none;" class="project-text">
@@ -162,7 +175,7 @@ Train core skills, like instrument handling, depth perception, and orientation i
 
       <div id="singraven-con" style="display: none;" class="project-text">
         <p><b>Contributions</b></p>
-        <p>I had several important responsibilities: I was a team lead, which meant I was responsible for the team management, piching all design ideas to the client and then to the funders, managing resourses and also I was developing quest design and narrative branching design and implementing them to Unreal Engine. .</p>
+        <p>I had several important responsibilities: I was a team lead, which meant I was responsible for team management, pitching all design ideas to the client and then to the funders, managing resources, and developing quest design and narrative branching design, as well as implementing them in Unreal Engine.</p>
       </div>
     </div>
   </div>
@@ -172,9 +185,9 @@ Train core skills, like instrument handling, depth perception, and orientation i
     <div class="w3-container w3-white">
       <div class="project-header-links">
         <p><b>Code: Rose</b></p>
-        <a href="javascript:void(0)" onclick="showProjectSection('rose', 'rose-about', 'resourses/Throught the screen.png')">About</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('rose', 'rose-desc', 'resourses/Screenshot 2026-04-13 110644.png')">Description</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('rose', 'rose-con', 'resourses/blockout.png')">Contributions</a>
+        <a href="javascript:void(0)" class="active" onclick="showProjectSection('rose', 'rose-about', 'resourses/Throught the screen.png', this)">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('rose', 'rose-desc', 'resourses/Screenshot 2026-04-13 110644.png', this)">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('rose', 'rose-con', 'resourses/blockout.png', this)">Contributions</a>
       </div>
 
       <div id="rose-about" class="project-text">
@@ -199,9 +212,9 @@ Train core skills, like instrument handling, depth perception, and orientation i
     <div class="w3-container w3-white">
       <div class="project-header-links">
         <p><b>Stolen Worlds</b></p>
-        <a href="javascript:void(0)" onclick="showProjectSection('stolen', 'stolen-about', 'resourses/StolenSouls.png')">About</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('stolen', 'stolen-desc', 'resourses/Screenshot 2026-04-13 111854.png')">Description</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('stolen', 'stolen-con', 'resourses/PathStolenSouls.png')">Contributions</a>
+        <a href="javascript:void(0)" class="active" onclick="showProjectSection('stolen', 'stolen-about', 'resourses/StolenSouls.png', this)">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('stolen', 'stolen-desc', 'resourses/Screenshot 2026-04-13 111854.png', this)">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('stolen', 'stolen-con', 'resourses/PathStolenSouls.png', this)">Contributions</a>
       </div>
 
       <div id="stolen-about" class="project-text">
@@ -228,9 +241,9 @@ The scope of this prototype is to build a small, crumbled castle where the worsh
     <div class="w3-container w3-white">
       <div class="project-header-links">
         <p><b>Ant Troubles</b></p>
-        <a href="javascript:void(0)" onclick="showProjectSection('ant', 'ant-about', 'resourses/AntTrobles.png')">About</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('ant', 'ant-desc', 'resourses/Screenshot 2026-04-15 153502.png')">Description</a>
-        <a href="javascript:void(0)" onclick="showProjectSection('ant', 'ant-con', 'resourses/photo_5397757225528398889_y.jpg')">Contributions</a>
+        <a href="javascript:void(0)" class="active" onclick="showProjectSection('ant', 'ant-about', 'resourses/AntTrobles.png', this)">About</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('ant', 'ant-desc', 'resourses/Screenshot 2026-04-15 153502.png', this)">Description</a>
+        <a href="javascript:void(0)" onclick="showProjectSection('ant', 'ant-con', 'resourses/photo_5397757225528398889_y.jpg', this)">Contributions</a>
       </div>
 
       <div id="ant-about" class="project-text">
@@ -285,7 +298,7 @@ The scope of this prototype is to build a small, crumbled castle where the worsh
     <div class="w3-grey">
       <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">85%</div>
     </div>
-    <p>Creative writing</p>
+    <p>Creative and Technical Writing</p>
     <div class="w3-grey">
       <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
     </div>
@@ -358,7 +371,7 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
-function showProjectSection(project, section, imgSrc) {
+function showProjectSection(project, section, imgSrc, element) {
   var i;
   var x = document.getElementById(project).getElementsByClassName("project-text");
   for (i = 0; i < x.length; i++) {
@@ -371,6 +384,15 @@ function showProjectSection(project, section, imgSrc) {
     if (img) {
       img.src = imgSrc;
     }
+  }
+
+  // Handle active class on links
+  var links = document.getElementById(project).querySelectorAll(".project-header-links a");
+  for (i = 0; i < links.length; i++) {
+    links[i].classList.remove("active");
+  }
+  if (element) {
+    element.classList.add("active");
   }
 }
 
